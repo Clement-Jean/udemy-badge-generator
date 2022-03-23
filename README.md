@@ -2,6 +2,8 @@
 
 This action creates a udemy rating badge for one or multiple courses (average).
 
+example: ![Udemy](.github/badges/udemy.svg)
+
 ## Environment Variables
 
 **It is recommended to set these as Github Secrets and use the secrets inside your github action yml file (see: https://docs.github.com/en/actions/security-guides/encrypted-secrets)**
