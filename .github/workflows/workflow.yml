@@ -17,8 +17,8 @@ jobs:
       - name: Badge generation
         uses: ./
         env:
-          UDEMY_TOKEN: ${{ secrets.UdemyToken }}
-          UDEMY_COURSE: ${{ secrets.UdemyCourse }}
+          UDEMY_TOKEN: ${{ secrets.UDEMY_TOKEN }}
+          UDEMY_COURSE: ${{ secrets.UDEMY_COURSE }}
       - name: Commit the badge (if it changed)
         run: |
           if [[ `git status --porcelain` ]]; then
