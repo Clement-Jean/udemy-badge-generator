@@ -1,8 +1,8 @@
 FROM golang:1.17.8-alpine3.15 as build-env
 
 WORKDIR /go/src/app
-COPY *.go .
-COPY assets assets
+COPY *.go ./
+COPY assets assets/
 
 RUN go mod init
 RUN go get -d -v ./...
