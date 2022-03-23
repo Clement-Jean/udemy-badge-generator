@@ -1,8 +1,8 @@
 name: 'udemy-badge-generator'
 description: 'Udemy rating badge'
 branding: 
-  icon: 'book-open'
-  color: 'green'
+  icon: 'award'
+  color: 'purple'
 inputs:
   label:
     description: 'Label text'
