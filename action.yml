@@ -1,0 +1,46 @@
+name: 'udemy-badge-generator'
+description: 'Udemy rating badge'
+branding: 
+  icon: 'book-open'
+  color: 'green'
+inputs:
+  label:
+    description: 'Label text'
+    required: false
+    default: 'udemy'
+  label-bg:
+    description: 'Label background color'
+    required: false
+    default: '#983DE7'
+  label-fg:
+    description: 'Label foreground color'
+    required: false
+    default: '#FFF'
+  rating-fg:
+    description: 'Rating foreground color'
+    required: false
+    default: '#fff'
+  badge-radius:
+    description: 'Radius for rounding corners of the badge'
+    required: false
+    default: 3
+  generate-path:
+    description: 'Path where the badge will be generated'
+    required: false
+    default: '.github/badges/'
+  generate-filename:
+    description: 'Filename, without extension, of the file generated'
+    required: false
+    default: 'udemy'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.label }}
+    - ${{ inputs.label-bg }}
+    - ${{ inputs.label-fg }}
+    - ${{ inputs.rating-fg }}
+    - ${{ inputs.badge-radius }}
+    - ${{ inputs.generate-path }}
+    - ${{ inputs.generate-filename }}
+
